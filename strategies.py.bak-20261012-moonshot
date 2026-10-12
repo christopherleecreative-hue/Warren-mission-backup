@@ -1,0 +1,99 @@
+"""Candidate strategy families. Pure functions: target(panel, i, params) -> {coin: weight}, weights sum <= 1 (rest cash).
+Uses only data up to and including day index i (the close). Deterministic, no model. Panel: see engine.Panel."""
+STABLE = {"USDT", "USDC", "AUDM", "RLUSD", "XAUT"}
+
+def sma(x, i, n):
+    w = x[i - n + 1:i + 1] if i >= n - 1 else None
+    return sum(w) / n if w and None not in w else None
+
+def liquid(P, i, min_aud=20000, n=14):
+    out = []
+    for c in P.coins:
+        if c in STABLE or P.close[c][i] is None or i < n: continue
+        vs = [P.close[c][j] * P.vol[c][j] for j in range(i - n + 1, i + 1) if P.close[c][j] is not None]
+        if len(vs) == n and sum(vs) / n >= min_aud: out.append(c)
+    return out
+
+def ret(P, c, i, n):
+    a, b = P.close[c][i - n], P.close[c][i]
+    return b / a - 1 if a and b else None
+
+def trend(P, i, p):                      # hold coins above their SMA, equal weight
+    held = [c for c in p["coins"] if P.close[c][i] and sma(P.close[c], i, p["n"]) and P.close[c][i] > sma(P.close[c], i, p["n"])]
+    return {c: 1 / len(p["coins"]) for c in held}
+
+def xsmom(P, i, p):                      # top-k by n-day return among liquid coins, market filter on BTC
+    btc = P.close["BTC"]
+    if i < p["gauge"] or not sma(btc, i, p["gauge"]) or btc[i] < sma(btc, i, p["gauge"]): return {}
+    r = sorted(((ret(P, c, i, p["n"]), c) for c in liquid(P, i) if i >= p["n"] and ret(P, c, i, p["n"]) is not None), reverse=True)
+    top = [c for x, c in r[:p["k"]] if x > p.get("min", 0)]
+    return {c: 1 / p["k"] for c in top}
+
+def breakout(P, i, p):                   # Donchian: enter on new n-day high, hold until close under exit-day low
+    out = {}
+    for c in liquid(P, i):
+        x = P.close[c]
+        if i < p["n"] + 1 or x[i] is None: continue
+        hi = max(v for v in x[i - p["n"]:i] if v)
+        lo = min(v for v in x[i - p["exit"]:i] if v)
+        held = P.state.setdefault(("bo", c), False)
+        if not held and x[i] > hi: held = True
+        elif held and x[i] < lo: held = False
+        P.state[("bo", c)] = held
+        if held: out[c] = 1
+    out = dict(sorted(out.items())[:p["max"]])
+    return {c: 1 / p["max"] for c in out}
+
+def meanrev(P, i, p):                    # buy deep z-score dips in liquid coins, hold hold days; BTC filter optional
+    out = {}
+    for c in liquid(P, i):
+        x = P.close[c]
+        if i < p["n"] or any(v is None for v in x[i - p["n"]:i + 1]): continue
+        w = x[i - p["n"]:i + 1]; m = sum(w) / len(w); sd = (sum((v - m) ** 2 for v in w) / len(w)) ** .5
+        if sd and (x[i] - m) / sd < -p["z"]: P.state[("mr", c)] = i
+        if i - P.state.get(("mr", c), -99) < p["hold"]: out[c] = 1
+    out = dict(sorted(out.items(), key=lambda kv: -P.state[("mr", kv[0])])[:p["max"]])
+    return {c: 1 / p["max"] for c in out}
+
+def rotate1(P, i, p):                    # concentrated: single strongest coin by n-day return, only if positive and above SMA
+    r = sorted(((ret(P, c, i, p["n"]), c) for c in liquid(P, i) if i >= p["n"] and ret(P, c, i, p["n"]) is not None), reverse=True)
+    for x, c in r[:1]:
+        if x > p["min"] and P.close[c][i] > (sma(P.close[c], i, p["sma"]) or 1e18): return {c: 1}
+    return {}
+
+def hold(P, i, p):                       # benchmark
+    return {c: 1 / len(p["coins"]) for c in p["coins"]}
+
+def tsmom_vol(P, i, p):                  # time-series momentum on the k most liquid coins, vol-managed (literature: crash protection)
+    L = sorted(liquid(P, i), key=lambda c: -sum(P.close[c][j] * P.vol[c][j] for j in range(i - 13, i + 1) if P.close[c][j]))[:p["k"]]
+    out = {}
+    for c in L:
+        x = P.close[c]
+        if i < max(p["n"], 21) or x[i] is None or not sma(x, i, p["n"]) or x[i] <= sma(x, i, p["n"]): continue
+        r = [x[j] / x[j - 1] - 1 for j in range(i - 19, i + 1) if x[j] and x[j - 1]]
+        if len(r) < 15: continue
+        m = sum(r) / len(r); sd = (sum((v - m) ** 2 for v in r) / len(r)) ** .5
+        out[c] = min(1 / p["k"] * p.get("lev", 1), p["tvol"] / sd / p["k"]) if sd else 0
+    t = sum(out.values())
+    return {c: v / t for c, v in out.items()} if t > 1 else out
+
+def newlist(P, i, p):                    # event: coin whose first-ever candle is <= age days old (new BTC Markets AUD listing); hold p["hold"] days
+    out = []
+    for c in P.coins:
+        if c in STABLE: continue
+        first = next((j for j, v in enumerate(P.close[c]) if v), None)
+        if first and first > 0 and p["delay"] <= i - first < p["delay"] + p["hold"] and P.close[c][i]: out.append(c)
+    out = out[:p["max"]]
+    return {c: 1 / p["max"] for c in out}
+
+FAMILIES = {"newlist": newlist, "tsmom_vol": tsmom_vol, "trend": trend, "xsmom": xsmom, "breakout": breakout, "meanrev": meanrev, "rotate1": rotate1, "hold": hold}
+
+CANDIDATES = {   # id -> (family, params). Frozen configs; variants are spawned by tournament.py with new ids.
+    "BENCH-BTC":      ("hold", {"coins": ["BTC"]}),
+    "C1-trend-btceth": ("trend", {"coins": ["BTC", "ETH"], "n": 50}),
+    "C2-xsmom-top3":  ("xsmom", {"n": 21, "k": 3, "gauge": 100}),
+    "C3-breakout20":  ("breakout", {"n": 20, "exit": 10, "max": 5}),
+    "C4-meanrev-z2":  ("meanrev", {"n": 20, "z": 2.0, "hold": 3, "max": 5}),
+    "C5-rotate1-fast": ("rotate1", {"n": 7, "sma": 20, "min": 0.05}),
+    "C6-xsmom-top2-fast": ("xsmom", {"n": 10, "k": 2, "gauge": 50}),
+}

@@ -1,0 +1,286 @@
+{
+ "BENCH-BTC": {
+  "family": "hold",
+  "params": {
+   "coins": [
+    "BTC"
+   ]
+  },
+  "start": "2026-10-12",
+  "status": "active",
+  "note": "seed set 12 Oct 2026"
+ },
+ "C1-trend-btceth": {
+  "family": "trend",
+  "params": {
+   "coins": [
+    "BTC",
+    "ETH"
+   ],
+   "n": 50
+  },
+  "start": "2026-10-12",
+  "status": "active",
+  "note": "seed set 12 Oct 2026"
+ },
+ "C2-xsmom-top3": {
+  "family": "xsmom",
+  "params": {
+   "n": 21,
+   "k": 3,
+   "gauge": 100
+  },
+  "start": "2026-10-12",
+  "status": "active",
+  "note": "seed set 12 Oct 2026"
+ },
+ "C3-breakout20": {
+  "family": "breakout",
+  "params": {
+   "n": 20,
+   "exit": 10,
+   "max": 5
+  },
+  "start": "2026-10-12",
+  "status": "active",
+  "note": "seed set 12 Oct 2026"
+ },
+ "C4-meanrev-z2": {
+  "family": "meanrev",
+  "params": {
+   "n": 20,
+   "z": 2.0,
+   "hold": 3,
+   "max": 5
+  },
+  "start": "2026-10-12",
+  "status": "active",
+  "note": "seed set 12 Oct 2026"
+ },
+ "C5-rotate1-fast": {
+  "family": "rotate1",
+  "params": {
+   "n": 7,
+   "sma": 20,
+   "min": 0.05
+  },
+  "start": "2026-10-12",
+  "status": "active",
+  "note": "seed set 12 Oct 2026"
+ },
+ "C6-xsmom-top2-fast": {
+  "family": "xsmom",
+  "params": {
+   "n": 10,
+   "k": 2,
+   "gauge": 50
+  },
+  "start": "2026-10-12",
+  "status": "active",
+  "note": "seed set 12 Oct 2026"
+ },
+ "C7-tsmom-vol-k4": {
+  "family": "tsmom_vol",
+  "params": {
+   "n": 50,
+   "k": 4,
+   "tvol": 0.04,
+   "reb": 7,
+   "lev": 1
+  },
+  "start": "2026-10-12",
+  "status": "active",
+  "note": "literature: vol-managed time-series momentum"
+ },
+ "C8-xsmom-14d-reb14": {
+  "family": "xsmom",
+  "params": {
+   "n": 14,
+   "k": 3,
+   "gauge": 100,
+   "reb": 14
+  },
+  "start": "2026-10-12",
+  "status": "active",
+  "note": "literature: momentum peak at ~2 weeks, slow rebalance to cut costs"
+ },
+ "C9-newlist-d3h10": {
+  "family": "newlist",
+  "params": {
+   "delay": 3,
+   "hold": 10,
+   "max": 2
+  },
+  "start": "2026-10-12",
+  "status": "active",
+  "note": "event: hold new BTC Markets AUD listings from day 3 for 10 days; backtest ~11 events, total +9%, tiny sample"
+ },
+ "M0-moon-n7": {
+  "family": "moonshot",
+  "params": {
+   "n": 7,
+   "thr": 0.15,
+   "k": 1,
+   "stop": 0.15,
+   "volx": 1.5,
+   "minaud": 5000
+  },
+  "start": "2026-10-12",
+  "status": "active",
+  "note": "HIGH-VARIANCE lottery ticket aimed at Chris's +100% test: backtest fit touch 9%, holdout touch 0%, drawdown to -70%; regime dependent"
+ },
+ "M0-moon-n3": {
+  "family": "moonshot",
+  "params": {
+   "n": 3,
+   "thr": 0.3,
+   "k": 1,
+   "stop": 0.15,
+   "volx": 3,
+   "minaud": 5000
+  },
+  "start": "2026-10-12",
+  "status": "active",
+  "note": "HIGH-VARIANCE lottery ticket: fit touch 6%, holdout touch 0%"
+ },
+ "C10-donchian-ens-k5": {
+  "family": "donchian_ens",
+  "params": {
+   "lbs": [
+    20,
+    40,
+    60,
+    100,
+    150,
+    250
+   ],
+   "k": 5,
+   "tvol": 0.03,
+   "reb": 7
+  },
+  "start": "2026-10-12",
+  "status": "active",
+  "note": "literature replicate (Zarattini/Pagani/Barbon 2025): backtest here x0.85-0.95 over ~640 days, no edge; runs for forward evidence"
+ },
+ "C11-gated-xsmom14": {
+  "family": "gated",
+  "params": {
+   "inner": "xsmom",
+   "ip": {
+    "n": 14,
+    "k": 3,
+    "gauge": 100,
+    "reb": 14
+   },
+   "on": [
+    "BULL",
+    "MANIA"
+   ]
+  },
+  "start": "2026-10-12",
+  "status": "active",
+  "note": "xsmom14 only in BULL/MANIA regimes (12y Tiingo: touch-100% 4.8%/16% vs 0.2% in BEAR); cash otherwise"
+ },
+ "WIDE1-moonshot-rot-k1": {
+  "family": "moonshot_rot",
+  "params": {
+   "n": 7,
+   "thr": 0.15,
+   "k": 1,
+   "stop": 0.15,
+   "volx": 1.5,
+   "minaud": 20000,
+   "swap": 2
+  },
+  "universe": "wide",
+  "cost": 0.015,
+  "start": "2026-10-12",
+  "status": "active",
+  "note": "HIGH-VARIANCE long shot on 103 AUD coins incl. Swyftx-only (QNT +356% in Sept: this rule turns A$500 into ~A$2,091 there); all-windows median -6%, DD -93%"
+ },
+ "WIDE2-moonshot-rot-swap1.5": {
+  "family": "moonshot_rot",
+  "params": {
+   "n": 7,
+   "thr": 0.15,
+   "k": 1,
+   "stop": 0.2,
+   "volx": 2,
+   "minaud": 20000,
+   "swap": 1.5
+  },
+  "universe": "wide",
+  "cost": 0.015,
+  "start": "2026-10-12",
+  "status": "active",
+  "note": "HIGH-VARIANCE long shot, wide universe; holdout touch 10%, end>=100% 5.2%, median -16%"
+ },
+ "WIDE3-gated-moonshot-rot": {
+  "family": "gated",
+  "params": {
+   "inner": "moonshot_rot",
+   "ip": {
+    "n": 7,
+    "thr": 0.15,
+    "k": 1,
+    "stop": 0.2,
+    "volx": 2,
+    "minaud": 20000,
+    "swap": 1.5
+   },
+   "on": [
+    "BULL",
+    "MANIA"
+   ]
+  },
+  "universe": "wide",
+  "cost": 0.015,
+  "start": "2026-10-12",
+  "status": "active",
+  "note": "moonshot rotation only when BTC regime is BULL/MANIA, cash in BEAR; event study: BULL trades mean +5.9% net, BEAR -10%; backtest ALL x1.40 vs x0.10 ungated, DD -36% vs -94%, holdout touch 7.4%"
+ },
+ "WIDE4-event-basket-k5": {
+  "family": "event_basket",
+  "params": {
+   "k": 5,
+   "volx": 3,
+   "btc90": 0.15,
+   "stop": 0.2,
+   "hold": 30,
+   "minaud": 50000
+  },
+  "universe": "wide",
+  "cost": 0.015,
+  "start": "2026-10-12",
+  "status": "active",
+  "note": "many small capped bets: volume >= 3x while BTC 90d > +15%, 20% trailing stop, 30d max; backtest 20 months x1.20, DD -30%, no +100% touches (steady, not goal-hitting)"
+ },
+ "BENCH-CASH": {
+  "family": "cash",
+  "params": {},
+  "start": "2026-10-12",
+  "status": "active",
+  "note": "control: no trades (research programme v1.5)"
+ },
+ "BENCH-DCA-BTC": {
+  "family": "dca",
+  "params": {
+   "coin": "BTC",
+   "weeks": 4,
+   "from": "2026-10-12"
+  },
+  "start": "2026-10-12",
+  "status": "active",
+  "note": "control: equal-budget regular buying, a quarter of the budget each week for 4 weeks (Crypto model review rec. 6)"
+ },
+ "BENCH-EW10": {
+  "family": "ew",
+  "params": {
+   "k": 10,
+   "reb": 30
+  },
+  "start": "2026-10-12",
+  "status": "active",
+  "note": "control: equal weight of the 10 most liquid coins, monthly rebalance"
+ }
+}

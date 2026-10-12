@@ -1,0 +1,41 @@
+{
+ "LAB6-trend-ls-n100-k3-v8-3x": {
+  "family": "trend_ls",
+  "params": {
+   "n": 100,
+   "k": 3,
+   "tvol": 0.08
+  },
+  "leverage": 3.0,
+  "start": "2026-10-12"
+ },
+ "LAB7-trend-ls-n100-k3-v4-3x": {
+  "family": "trend_ls",
+  "params": {
+   "n": 100,
+   "k": 3,
+   "tvol": 0.04
+  },
+  "leverage": 3.0,
+  "start": "2026-10-12"
+ },
+ "LABV20261012-moon_long-2x": {
+  "family": "moon_long",
+  "params": {
+   "n": 7,
+   "thr": 0.1
+  },
+  "leverage": 2.0,
+  "start": "2026-10-12"
+ },
+ "LABV20261012-trend_ls-3x": {
+  "family": "trend_ls",
+  "params": {
+   "n": 50,
+   "k": 3,
+   "tvol": 0.08
+  },
+  "leverage": 3.0,
+  "start": "2026-10-12"
+ }
+}
