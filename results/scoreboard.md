@@ -2,7 +2,7 @@
 
 PAPER ONLY - shadow trials, not the live book; net of 0.5% fee + 0.5% slippage per side; day-close data (BTC Markets AUD)
 
-As of 2026-10-21T02:29:52Z
+As of 2026-10-21T05:14:14Z
 
 | Candidate | Days | Equity A$ | Return % | Max DD % |
 |---|---|---|---|---|

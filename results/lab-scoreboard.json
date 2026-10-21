@@ -1,6 +1,6 @@
 {
  "label": "PAPER ONLY - shadow lab: shorts and leverage, modelled with verified Independent Reserve costs (0.5% fee + 0.1% slippage per side, 0.05%/day long interest on the borrowed part, 0.03%/day short). Never the live book.",
- "asof": "2026-10-21T02:29:52Z",
+ "asof": "2026-10-21T05:14:14Z",
  "start": "2026-10-12",
  "target": "A$1000 (+100%)",
  "books": [
