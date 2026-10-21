@@ -1,0 +1,98 @@
+{
+ "label": "PAPER ONLY - shadow lab: shorts and leverage, modelled with verified Independent Reserve costs (0.5% fee + 0.1% slippage per side, 0.05%/day long interest on the borrowed part, 0.03%/day short). Never the live book.",
+ "asof": "2026-10-21T02:29:52Z",
+ "start": "2026-10-12",
+ "target": "A$1000 (+100%)",
+ "books": [
+  {
+   "id": "LABV20261012-trend_ls-3x",
+   "family": "trend_ls",
+   "leverage": 3.0,
+   "days": 8,
+   "equity": 499.33,
+   "return_pct": -0.13,
+   "max_drawdown_pct": -3.92,
+   "ruined": false
+  },
+  {
+   "id": "LAB4-trend-ls-2x",
+   "family": "trend_ls",
+   "leverage": 2.0,
+   "days": 8,
+   "equity": 497.92,
+   "return_pct": -0.42,
+   "max_drawdown_pct": -2.13,
+   "ruined": false
+  },
+  {
+   "id": "LAB5-knife-short-3x",
+   "family": "knife_short",
+   "leverage": 3.0,
+   "days": 8,
+   "equity": 497.46,
+   "return_pct": -0.51,
+   "max_drawdown_pct": -0.51,
+   "ruined": false
+  },
+  {
+   "id": "LAB1-trend-ls-3x",
+   "family": "trend_ls",
+   "leverage": 3.0,
+   "days": 8,
+   "equity": 496.6,
+   "return_pct": -0.68,
+   "max_drawdown_pct": -3.19,
+   "ruined": false
+  },
+  {
+   "id": "LAB2-btc-ls-3x",
+   "family": "btc_ls",
+   "leverage": 3.0,
+   "days": 8,
+   "equity": 493.46,
+   "return_pct": -1.31,
+   "max_drawdown_pct": -5.69,
+   "ruined": false
+  },
+  {
+   "id": "LAB6-trend-ls-n100-k3-v8-3x",
+   "family": "trend_ls",
+   "leverage": 3.0,
+   "days": 8,
+   "equity": 481.89,
+   "return_pct": -3.62,
+   "max_drawdown_pct": -9.99,
+   "ruined": false
+  },
+  {
+   "id": "LAB7-trend-ls-n100-k3-v4-3x",
+   "family": "trend_ls",
+   "leverage": 3.0,
+   "days": 8,
+   "equity": 481.89,
+   "return_pct": -3.62,
+   "max_drawdown_pct": -9.99,
+   "ruined": false
+  },
+  {
+   "id": "LABV20261012-moon_long-2x",
+   "family": "moon_long",
+   "leverage": 2.0,
+   "days": 8,
+   "equity": 481.42,
+   "return_pct": -3.72,
+   "max_drawdown_pct": -3.72,
+   "ruined": false
+  },
+  {
+   "id": "LAB3-moon-long-3x",
+   "family": "moon_long",
+   "leverage": 3.0,
+   "days": 8,
+   "equity": 472.19,
+   "return_pct": -5.56,
+   "max_drawdown_pct": -5.56,
+   "ruined": false
+  }
+ ]
+}

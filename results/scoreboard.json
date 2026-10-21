@@ -1,0 +1,218 @@
+{
+ "label": "PAPER ONLY - shadow trials, not the live book; net of 0.5% fee + 0.5% slippage per side; day-close data (BTC Markets AUD)",
+ "asof": "2026-10-21T02:29:52Z",
+ "target": "A$1000 (+100%) within 30 days of mission start",
+ "books": [
+  {
+   "id": "C9-newlist-d3h10",
+   "family": "newlist",
+   "status": "active",
+   "start": "2026-10-12",
+   "days": 9,
+   "last_day": "2026-10-20T00:00:00.000000Z",
+   "equity": 500.0,
+   "return_pct": 0.0,
+   "max_drawdown_pct": 0.0
+  },
+  {
+   "id": "WIDE1-moonshot-rot-k1",
+   "status": "active",
+   "days": 0,
+   "equity": 500.0
+  },
+  {
+   "id": "WIDE2-moonshot-rot-swap1.5",
+   "status": "active",
+   "days": 0,
+   "equity": 500.0
+  },
+  {
+   "id": "WIDE3-gated-moonshot-rot",
+   "status": "active",
+   "days": 0,
+   "equity": 500.0
+  },
+  {
+   "id": "WIDE4-event-basket-k5",
+   "status": "active",
+   "days": 0,
+   "equity": 500.0
+  },
+  {
+   "id": "BENCH-CASH",
+   "family": "cash",
+   "status": "active",
+   "start": "2026-10-12",
+   "days": 9,
+   "last_day": "2026-10-20T00:00:00.000000Z",
+   "equity": 500.0,
+   "return_pct": 0.0,
+   "max_drawdown_pct": 0.0
+  },
+  {
+   "id": "BENCH-DCA-BTC",
+   "family": "dca",
+   "status": "active",
+   "start": "2026-10-12",
+   "days": 9,
+   "last_day": "2026-10-20T00:00:00.000000Z",
+   "equity": 499.38,
+   "return_pct": -0.12,
+   "max_drawdown_pct": -0.47
+  },
+  {
+   "id": "C7-tsmom-vol-k4",
+   "family": "tsmom_vol",
+   "status": "active",
+   "start": "2026-10-12",
+   "days": 9,
+   "last_day": "2026-10-20T00:00:00.000000Z",
+   "equity": 489.19,
+   "return_pct": -2.16,
+   "max_drawdown_pct": -2.66
+  },
+  {
+   "id": "BENCH-BTC",
+   "family": "hold",
+   "status": "active",
+   "start": "2026-10-12",
+   "days": 9,
+   "last_day": "2026-10-20T00:00:00.000000Z",
+   "equity": 487.92,
+   "return_pct": -2.42,
+   "max_drawdown_pct": -3.56
+  },
+  {
+   "id": "C4-meanrev-z2",
+   "family": "meanrev",
+   "status": "active",
+   "start": "2026-10-12",
+   "days": 9,
+   "last_day": "2026-10-20T00:00:00.000000Z",
+   "equity": 486.1,
+   "return_pct": -2.78,
+   "max_drawdown_pct": -2.78
+  },
+  {
+   "id": "C10-donchian-ens-k5",
+   "family": "donchian_ens",
+   "status": "active",
+   "start": "2026-10-12",
+   "days": 9,
+   "last_day": "2026-10-20T00:00:00.000000Z",
+   "equity": 484.86,
+   "return_pct": -3.03,
+   "max_drawdown_pct": -3.71
+  },
+  {
+   "id": "C3-breakout20",
+   "family": "breakout",
+   "status": "active",
+   "start": "2026-10-12",
+   "days": 9,
+   "last_day": "2026-10-20T00:00:00.000000Z",
+   "equity": 481.2,
+   "return_pct": -3.76,
+   "max_drawdown_pct": -3.76
+  },
+  {
+   "id": "C1-trend-btceth",
+   "family": "trend",
+   "status": "active",
+   "start": "2026-10-12",
+   "days": 9,
+   "last_day": "2026-10-20T00:00:00.000000Z",
+   "equity": 481.08,
+   "return_pct": -3.78,
+   "max_drawdown_pct": -4.36
+  },
+  {
+   "id": "C8-xsmom-14d-reb14",
+   "family": "xsmom",
+   "status": "active",
+   "start": "2026-10-12",
+   "days": 9,
+   "last_day": "2026-10-20T00:00:00.000000Z",
+   "equity": 475.42,
+   "return_pct": -4.92,
+   "max_drawdown_pct": -7.15
+  },
+  {
+   "id": "M0-moon-n3",
+   "family": "moonshot",
+   "status": "active",
+   "start": "2026-10-12",
+   "days": 9,
+   "last_day": "2026-10-20T00:00:00.000000Z",
+   "equity": 457.78,
+   "return_pct": -8.44,
+   "max_drawdown_pct": -8.44
+  },
+  {
+   "id": "BENCH-EW10",
+   "family": "ew",
+   "status": "active",
+   "start": "2026-10-12",
+   "days": 9,
+   "last_day": "2026-10-20T00:00:00.000000Z",
+   "equity": 457.66,
+   "return_pct": -8.47,
+   "max_drawdown_pct": -10.14
+  },
+  {
+   "id": "C11-gated-xsmom14",
+   "family": "gated",
+   "status": "active",
+   "start": "2026-10-12",
+   "days": 9,
+   "last_day": "2026-10-20T00:00:00.000000Z",
+   "equity": 453.17,
+   "return_pct": -9.37,
+   "max_drawdown_pct": -9.37
+  },
+  {
+   "id": "C2-xsmom-top3",
+   "family": "xsmom",
+   "status": "active",
+   "start": "2026-10-12",
+   "days": 9,
+   "last_day": "2026-10-20T00:00:00.000000Z",
+   "equity": 431.24,
+   "return_pct": -13.75,
+   "max_drawdown_pct": -13.83
+  },
+  {
+   "id": "C6-xsmom-top2-fast",
+   "family": "xsmom",
+   "status": "active",
+   "start": "2026-10-12",
+   "days": 9,
+   "last_day": "2026-10-20T00:00:00.000000Z",
+   "equity": 423.36,
+   "return_pct": -15.33,
+   "max_drawdown_pct": -15.33
+  },
+  {
+   "id": "M0-moon-n7",
+   "family": "moonshot",
+   "status": "active",
+   "start": "2026-10-12",
+   "days": 9,
+   "last_day": "2026-10-20T00:00:00.000000Z",
+   "equity": 408.76,
+   "return_pct": -18.25,
+   "max_drawdown_pct": -18.25
+  },
+  {
+   "id": "C5-rotate1-fast",
+   "family": "rotate1",
+   "status": "active",
+   "start": "2026-10-12",
+   "days": 9,
+   "last_day": "2026-10-20T00:00:00.000000Z",
+   "equity": 390.89,
+   "return_pct": -21.82,
+   "max_drawdown_pct": -21.82
+  }
+ ]
+}
