@@ -1,7 +1,7 @@
 # Warren mission cloud backup
 
-Run 2026-11-16 07:11 UTC. Paper only. Goal A$500 to A$1,000 by 11 Nov 2026.
+Run 2026-11-17 08:25 UTC. Paper only. Goal A$500 to A$1,000 by 11 Nov 2026.
 
-Best book here: LAB1-trend-ls-3x at A$888.21 (34 days). Books needing the Mac's 103-coin store (WIDE1-4) are not run in the cloud.
+Best book here: LAB1-trend-ls-3x at A$912.56 (35 days). Books needing the Mac's 103-coin store (WIDE1-4) are not run in the cloud.
 
 Files: scoreboard.md, scoreboard.json, lab-scoreboard.json.
