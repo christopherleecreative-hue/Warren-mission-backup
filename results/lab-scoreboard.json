@@ -1,36 +1,36 @@
 {
  "label": "PAPER ONLY - shadow lab: shorts and leverage, modelled with verified Independent Reserve costs (0.5% fee + 0.1% slippage per side, 0.05%/day long interest on the borrowed part, 0.03%/day short). Never the live book.",
- "asof": "2026-11-20T07:41:31Z",
+ "asof": "2026-11-21T07:38:50Z",
  "start": "2026-10-12",
  "target": "A$1000 (+100%)",
  "books": [
   {
-   "id": "LAB1-trend-ls-3x",
-   "family": "trend_ls",
-   "leverage": 3.0,
-   "days": 38,
-   "equity": 928.59,
-   "return_pct": 85.72,
-   "max_drawdown_pct": -13.84,
-   "ruined": false
-  },
-  {
    "id": "LABV20261012-trend_ls-3x",
    "family": "trend_ls",
    "leverage": 3.0,
-   "days": 38,
-   "equity": 919.91,
-   "return_pct": 83.98,
+   "days": 39,
+   "equity": 1067.59,
+   "return_pct": 113.52,
    "max_drawdown_pct": -17.27,
+   "ruined": false
+  },
+  {
+   "id": "LAB1-trend-ls-3x",
+   "family": "trend_ls",
+   "leverage": 3.0,
+   "days": 39,
+   "equity": 1059.41,
+   "return_pct": 111.88,
+   "max_drawdown_pct": -13.84,
    "ruined": false
   },
   {
    "id": "LAB2-btc-ls-3x",
    "family": "btc_ls",
    "leverage": 3.0,
-   "days": 38,
-   "equity": 786.82,
-   "return_pct": 57.36,
+   "days": 39,
+   "equity": 888.53,
+   "return_pct": 77.71,
    "max_drawdown_pct": -13.9,
    "ruined": false
   },
@@ -38,9 +38,9 @@
    "id": "LAB4-trend-ls-2x",
    "family": "trend_ls",
    "leverage": 2.0,
-   "days": 38,
-   "equity": 767.21,
-   "return_pct": 53.44,
+   "days": 39,
+   "equity": 839.29,
+   "return_pct": 67.86,
    "max_drawdown_pct": -9.28,
    "ruined": false
   },
@@ -48,17 +48,37 @@
    "id": "LABV20261012-moon_long-2x",
    "family": "moon_long",
    "leverage": 2.0,
-   "days": 38,
+   "days": 39,
    "equity": 481.42,
    "return_pct": -3.72,
    "max_drawdown_pct": -3.72,
    "ruined": false
   },
   {
+   "id": "LAB6-trend-ls-n100-k3-v8-3x",
+   "family": "trend_ls",
+   "leverage": 3.0,
+   "days": 39,
+   "equity": 480.86,
+   "return_pct": -3.83,
+   "max_drawdown_pct": -48.86,
+   "ruined": false
+  },
+  {
+   "id": "LAB7-trend-ls-n100-k3-v4-3x",
+   "family": "trend_ls",
+   "leverage": 3.0,
+   "days": 39,
+   "equity": 480.86,
+   "return_pct": -3.83,
+   "max_drawdown_pct": -48.86,
+   "ruined": false
+  },
+  {
    "id": "LAB3-moon-long-3x",
    "family": "moon_long",
    "leverage": 3.0,
-   "days": 38,
+   "days": 39,
    "equity": 472.19,
    "return_pct": -5.56,
    "max_drawdown_pct": -5.56,
@@ -68,30 +88,10 @@
    "id": "LAB5-knife-short-3x",
    "family": "knife_short",
    "leverage": 3.0,
-   "days": 38,
+   "days": 39,
    "equity": 465.22,
    "return_pct": -6.96,
    "max_drawdown_pct": -6.96,
-   "ruined": false
-  },
-  {
-   "id": "LAB6-trend-ls-n100-k3-v8-3x",
-   "family": "trend_ls",
-   "leverage": 3.0,
-   "days": 38,
-   "equity": 414.34,
-   "return_pct": -17.13,
-   "max_drawdown_pct": -48.86,
-   "ruined": false
-  },
-  {
-   "id": "LAB7-trend-ls-n100-k3-v4-3x",
-   "family": "trend_ls",
-   "leverage": 3.0,
-   "days": 38,
-   "equity": 414.34,
-   "return_pct": -17.13,
-   "max_drawdown_pct": -48.86,
    "ruined": false
   }
  ]
