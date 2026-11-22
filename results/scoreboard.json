@@ -1,6 +1,6 @@
 {
  "label": "PAPER ONLY - shadow trials, not the live book; net of 0.5% fee + 0.5% slippage per side; day-close data (BTC Markets AUD)",
- "asof": "2026-11-21T07:38:51Z",
+ "asof": "2026-11-22T07:22:23Z",
  "target": "A$1000 (+100%) within 30 days of mission start",
  "books": [
   {
@@ -32,8 +32,8 @@
    "family": "cash",
    "status": "active",
    "start": "2026-10-12",
-   "days": 40,
-   "last_day": "2026-11-20T00:00:00.000000Z",
+   "days": 41,
+   "last_day": "2026-11-21T00:00:00.000000Z",
    "equity": 500.0,
    "return_pct": 0.0,
    "max_drawdown_pct": 0.0
@@ -43,8 +43,8 @@
    "family": "tsmom_vol",
    "status": "active",
    "start": "2026-10-12",
-   "days": 40,
-   "last_day": "2026-11-20T00:00:00.000000Z",
+   "days": 41,
+   "last_day": "2026-11-21T00:00:00.000000Z",
    "equity": 485.61,
    "return_pct": -2.88,
    "max_drawdown_pct": -2.88
@@ -54,8 +54,8 @@
    "family": "breakout",
    "status": "active",
    "start": "2026-10-12",
-   "days": 40,
-   "last_day": "2026-11-20T00:00:00.000000Z",
+   "days": 41,
+   "last_day": "2026-11-21T00:00:00.000000Z",
    "equity": 478.51,
    "return_pct": -4.3,
    "max_drawdown_pct": -4.3
@@ -65,8 +65,8 @@
    "family": "trend",
    "status": "active",
    "start": "2026-10-12",
-   "days": 40,
-   "last_day": "2026-11-20T00:00:00.000000Z",
+   "days": 41,
+   "last_day": "2026-11-21T00:00:00.000000Z",
    "equity": 474.03,
    "return_pct": -5.19,
    "max_drawdown_pct": -5.19
@@ -76,8 +76,8 @@
    "family": "donchian_ens",
    "status": "active",
    "start": "2026-10-12",
-   "days": 40,
-   "last_day": "2026-11-20T00:00:00.000000Z",
+   "days": 41,
+   "last_day": "2026-11-21T00:00:00.000000Z",
    "equity": 463.44,
    "return_pct": -7.31,
    "max_drawdown_pct": -7.31
@@ -87,8 +87,8 @@
    "family": "moonshot",
    "status": "active",
    "start": "2026-10-12",
-   "days": 40,
-   "last_day": "2026-11-20T00:00:00.000000Z",
+   "days": 41,
+   "last_day": "2026-11-21T00:00:00.000000Z",
    "equity": 457.78,
    "return_pct": -8.44,
    "max_drawdown_pct": -8.44
@@ -98,8 +98,8 @@
    "family": "newlist",
    "status": "active",
    "start": "2026-10-12",
-   "days": 40,
-   "last_day": "2026-11-20T00:00:00.000000Z",
+   "days": 41,
+   "last_day": "2026-11-21T00:00:00.000000Z",
    "equity": 456.8,
    "return_pct": -8.64,
    "max_drawdown_pct": -8.64
@@ -109,8 +109,8 @@
    "family": "gated",
    "status": "active",
    "start": "2026-10-12",
-   "days": 40,
-   "last_day": "2026-11-20T00:00:00.000000Z",
+   "days": 41,
+   "last_day": "2026-11-21T00:00:00.000000Z",
    "equity": 442.03,
    "return_pct": -11.59,
    "max_drawdown_pct": -11.59
@@ -120,8 +120,8 @@
    "family": "xsmom",
    "status": "active",
    "start": "2026-10-12",
-   "days": 40,
-   "last_day": "2026-11-20T00:00:00.000000Z",
+   "days": 41,
+   "last_day": "2026-11-21T00:00:00.000000Z",
    "equity": 426.71,
    "return_pct": -14.66,
    "max_drawdown_pct": -14.66
@@ -131,8 +131,8 @@
    "family": "xsmom",
    "status": "active",
    "start": "2026-10-12",
-   "days": 40,
-   "last_day": "2026-11-20T00:00:00.000000Z",
+   "days": 41,
+   "last_day": "2026-11-21T00:00:00.000000Z",
    "equity": 424.66,
    "return_pct": -15.07,
    "max_drawdown_pct": -16.07
@@ -142,8 +142,8 @@
    "family": "xsmom",
    "status": "active",
    "start": "2026-10-12",
-   "days": 40,
-   "last_day": "2026-11-20T00:00:00.000000Z",
+   "days": 41,
+   "last_day": "2026-11-21T00:00:00.000000Z",
    "equity": 423.36,
    "return_pct": -15.33,
    "max_drawdown_pct": -15.33
@@ -153,10 +153,10 @@
    "family": "meanrev",
    "status": "active",
    "start": "2026-10-12",
-   "days": 40,
-   "last_day": "2026-11-20T00:00:00.000000Z",
-   "equity": 421.55,
-   "return_pct": -15.69,
+   "days": 41,
+   "last_day": "2026-11-21T00:00:00.000000Z",
+   "equity": 422.79,
+   "return_pct": -15.44,
    "max_drawdown_pct": -15.69
   },
   {
@@ -164,8 +164,8 @@
    "family": "moonshot",
    "status": "active",
    "start": "2026-10-12",
-   "days": 40,
-   "last_day": "2026-11-20T00:00:00.000000Z",
+   "days": 41,
+   "last_day": "2026-11-21T00:00:00.000000Z",
    "equity": 408.76,
    "return_pct": -18.25,
    "max_drawdown_pct": -18.25
@@ -175,10 +175,10 @@
    "family": "dca",
    "status": "active",
    "start": "2026-10-12",
-   "days": 40,
-   "last_day": "2026-11-20T00:00:00.000000Z",
-   "equity": 384.29,
-   "return_pct": -23.14,
+   "days": 41,
+   "last_day": "2026-11-21T00:00:00.000000Z",
+   "equity": 393.79,
+   "return_pct": -21.24,
    "max_drawdown_pct": -23.47
   },
   {
@@ -186,10 +186,10 @@
    "family": "hold",
    "status": "active",
    "start": "2026-10-12",
-   "days": 40,
-   "last_day": "2026-11-20T00:00:00.000000Z",
-   "equity": 366.71,
-   "return_pct": -26.66,
+   "days": 41,
+   "last_day": "2026-11-21T00:00:00.000000Z",
+   "equity": 375.78,
+   "return_pct": -24.84,
    "max_drawdown_pct": -26.66
   },
   {
@@ -197,8 +197,8 @@
    "family": "rotate1",
    "status": "active",
    "start": "2026-10-12",
-   "days": 40,
-   "last_day": "2026-11-20T00:00:00.000000Z",
+   "days": 41,
+   "last_day": "2026-11-21T00:00:00.000000Z",
    "equity": 359.07,
    "return_pct": -28.19,
    "max_drawdown_pct": -28.19
@@ -208,10 +208,10 @@
    "family": "ew",
    "status": "active",
    "start": "2026-10-12",
-   "days": 40,
-   "last_day": "2026-11-20T00:00:00.000000Z",
-   "equity": 319.91,
-   "return_pct": -36.02,
+   "days": 41,
+   "last_day": "2026-11-21T00:00:00.000000Z",
+   "equity": 324.46,
+   "return_pct": -35.11,
    "max_drawdown_pct": -36.02
   }
  ]
